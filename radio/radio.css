@@ -1,0 +1,65 @@
+.box.radio {
+    color: #AAAAAA;
+}
+.radio > ul {
+    list-style: none;
+}
+
+.radio li {
+    position: relative;
+}
+
+.radio li label {
+    position: relative;
+    color: #AAAAAA;
+    display: block;
+    padding: 7px;
+    padding-left: 30px;
+    cursor: pointer;
+    transition: all 0.25s linear;
+}
+.radio li:hover label {
+    color: #FFFFFF;
+}
+
+.radio input {
+    position: absolute;
+    visibility: hidden;
+}
+
+.radio .check {
+    display: block;
+    position: absolute;
+    border: 4px solid #AAAAAA;
+    border-radius: 100%;
+    height: 15px;
+    width: 15px;
+    bottom: 6px;
+    cursor: pointer;
+    transition: all 0.25s linear;
+}
+.radio li:hover .check {
+    border: 4px solid #FFFFFF;
+}
+
+.radio .check:before {
+    display: block;
+    position: absolute;
+    content: '';
+    border-radius: 100%;
+    height: 11px;
+    width: 11px;
+    top: 2px;
+    left: 2px;
+    transition: background 0.25s linear;
+}
+
+.radio input:checked ~ label {
+    color: #0DFF92;
+}
+.radio input:checked ~ .check {
+    border: 4px solid #0DFF92;
+}
+.radio input:checked ~ .check:before {
+    background: #0DFF92;
+}
